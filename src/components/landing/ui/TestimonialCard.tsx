@@ -11,7 +11,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ data }: TestimonialCardProps) {
   return (
     <div
-      className={`text-[0.8rem] flex-shrink-0 max-w-[17rem] flex flex-col justify-between gap-3 p-6 shadow-md rounded-xl font-light border border-[#F1F1F1]/20 my-2 cursor-pointer bg-[#0D0D0D]/20 backdrop-blur-md`}
+      className={`text-[0.8rem] flex-shrink-0 max-w-[17rem] flex flex-col justify-between gap-3 p-6 shadow-md rounded-xl font-light border border-[#F1F1F1]/10 my-2 cursor-pointer bg-[#0D0D0D]/25 backdrop-blur-md`}
     >
       <p>{data.content}</p>
       <div className="flex gap-2 items-center">
