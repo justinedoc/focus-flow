@@ -1,4 +1,10 @@
-export const featuresInfo = [
+export interface FeaturesTypes {
+  title: string;
+  description: string;
+  icon: React.ReactElement;
+}
+
+export const featuresInfo: FeaturesTypes[] = [
   {
     title: "Goal setting and tracking",
     description:

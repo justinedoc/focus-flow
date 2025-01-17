@@ -11,8 +11,8 @@ function LandingPage() {
     <main>
       <Navbar />
       <Hero />
-      <About />
       <Features />
+      <About />
       <Pricing />
       <Testimonials />
       <Footer />

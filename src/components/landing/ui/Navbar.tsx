@@ -3,10 +3,10 @@ import Button from "./Button";
 import Logo from "./Logo";
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center bg-black text-white px-10 py-3">
+    <nav className="flex justify-between items-center bg-black text-white px-10 py-5">
       <Logo withName />
 
-      <div className="flex gap-32">
+      <div className="flex gap-16">
         <ul className="flex">
           {navItems.map((nav) => (
             <li key={nav.name} className="py-2 px-4">
