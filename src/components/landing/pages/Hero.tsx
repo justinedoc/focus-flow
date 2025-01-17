@@ -1,6 +1,5 @@
 import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
-import heroOverlay from "../../../assets/images/hero-bg_2.png";
 
 function Hero() {
   return (
@@ -15,9 +14,6 @@ function Hero() {
         <SectionHeader description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes." />
         <Button>Signup now!</Button>
       </main>
-      <div className="absolute -bottom-10 left-0 z-10">
-        <img src={heroOverlay} alt="Hero background" />
-      </div>
     </section>
   );
 }

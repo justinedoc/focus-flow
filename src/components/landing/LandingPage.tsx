@@ -13,8 +13,8 @@ function LandingPage() {
       <Hero />
       <Features />
       <About />
-      <Pricing />
       <Testimonials />
+      <Pricing />
       <Footer />
     </main>
   );

@@ -11,3 +11,7 @@
 .__section-padding {
   @apply p-5 md:px-36;
 }
+
+.__testimonial-card {
+  @apply flex gap-5 overflow-x-scroll;
+}

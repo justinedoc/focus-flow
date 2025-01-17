@@ -1,13 +1,17 @@
 import { featuresInfo } from "../constants/Features";
 import FeaturesCard from "../ui/FeaturesCard";
 import SectionHeader from "../ui/SectionHeader";
-
+import heroOverlay from "../../../assets/images/hero-bg_2.png";
 function Features() {
   return (
     <section
       id="features"
-      className="bg-black text-white flex flex-col items-center __section-padding md:pb-10"
+      className="bg-black text-white flex flex-col items-center __section-padding md:pb-10 relative"
     >
+      <div className="absolute -top-40 left-0 z-10">
+        <img src={heroOverlay} alt="Hero background" />
+      </div>
+      
       <SectionHeader
         title="Everything you need"
         description="
