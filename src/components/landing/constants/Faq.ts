@@ -1,4 +1,4 @@
-interface FaqsType {
+export interface FaqsType {
   question: string;
   answer: string;
 }

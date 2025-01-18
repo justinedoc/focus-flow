@@ -11,7 +11,7 @@ function Features() {
       <div className="absolute -top-40 left-0 z-10">
         <img src={heroOverlay} alt="Hero background" />
       </div>
-      
+
       <SectionHeader
         title="Everything you need"
         description="
@@ -20,7 +20,7 @@ function Features() {
 
       <main className="flex flex-wrap gap-4 mt-10 mb-3">
         {featuresInfo.map((info) => (
-          <FeaturesCard features={info} />
+          <FeaturesCard key={info.title} features={info} />
         ))}
       </main>
     </section>
