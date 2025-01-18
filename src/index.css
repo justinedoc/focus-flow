@@ -9,9 +9,5 @@
 }
 
 .__section-padding {
-  @apply md:px-36 px-5 py-9 md:py-16;
-}
-
-.__testimonial-card {
-  @apply flex flex-wrap gap-5 overflow-x-auto;
+  @apply md:px-36 px-3 py-9 md:py-16;
 }

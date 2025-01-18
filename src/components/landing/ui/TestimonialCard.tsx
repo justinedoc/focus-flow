@@ -11,7 +11,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ data, index }: TestimonialCardProps) {
   return (
     <div
-      className={`text-[0.8rem] flex-shrink-0 w-full md:max-w-[17rem] flex flex-col justify-between gap-3 p-6 shadow-md rounded-xl font-light border border-[#F1F1F1]/10 mr-5 cursor-pointer bg-[#0D0D0D]/25 backdrop-blur-md __anim-top __delay-${
+      className={`text-[0.8rem] md:flex-shrink-0 w-fit md:max-w-[17rem] flex flex-col justify-between gap-3 p-6 shadow-md rounded-xl font-light border border-[#F1F1F1]/10 mr-5 cursor-pointer bg-[#0D0D0D]/25 backdrop-blur-md __anim-top __delay-${
         index * 250
       }`}
     >

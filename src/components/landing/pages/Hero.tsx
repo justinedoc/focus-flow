@@ -21,13 +21,13 @@ function Hero() {
         src={heroIconMsg}
         alt="message"
         loading="lazy"
-        className="absolute top-32 size-[12rem] right-48 z-20 drop-shadow-2xl hidden md:block __anim-left __delay-500"
+        className="absolute top-32 size-[12rem] lg:right-14 xl:right-48 z-20 drop-shadow-2xl hidden md:block __anim-left __delay-500"
       />
       <img
         src={heroIconSend}
         alt="message"
         loading="lazy"
-        className="absolute top-48 size-[12rem] left-52 z-20 drop-shadow-2xl hidden md:block __anim-right __delay-650"
+        className="absolute top-48 size-[12rem] lg:left-20 xl:left-52 z-20 drop-shadow-2xl hidden md:block __anim-right __delay-650"
       />
     </section>
   );

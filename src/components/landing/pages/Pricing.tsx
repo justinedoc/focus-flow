@@ -15,12 +15,10 @@ function Pricing() {
       />
 
       <div className="flex flex-wrap gap-8 my-7 justify-center md:items-end">
-        {pricingInfo.map((pricingInfo, i) => (
+        {pricingInfo.map((pricingInfo) => (
           <main
             key={pricingInfo.plan}
-            className={`flex flex-col gap-5 p-8 min-w-[20rem] md:min-w-[18rem] rounded-2xl border border-white/15 shadow-md text-sm transition duration-500 hover:-translate-y-4 cursor-pointer __anim-bottom __delay-${
-              i * 250
-            }`}
+            className={`flex flex-col gap-5 p-8 min-w-[20rem] md:min-w-[18rem] rounded-2xl border border-white/15 shadow-md text-sm transition duration-500 hover:-translate-y-4 cursor-pointer`}
             style={{
               backgroundColor: pricingInfo.inBlack ? "#070212" : "#14082ab7",
               color: "white",
