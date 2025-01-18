@@ -23,8 +23,8 @@ function Features() {
       />
 
       <main className="grid xl:grid-cols-3 grid-cols-1 gap-4 mt-10 mb-3">
-        {featuresInfo.map((info) => (
-          <FeaturesCard key={info.title} features={info} />
+        {featuresInfo.map((info, i) => (
+          <FeaturesCard key={info.title} features={info} index={i + 1} />
         ))}
       </main>
     </section>

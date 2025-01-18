@@ -1,8 +1,18 @@
 import { type FeaturesTypes } from "../constants/Features";
 
-function FeaturesCard({ features }: { features: FeaturesTypes }) {
+function FeaturesCard({
+  features,
+  index,
+}: {
+  features: FeaturesTypes;
+  index: number;
+}) {
   return (
-    <article className="flex flex-col items-center max-w-[20rem] border border-white/20 rounded-md md:gap-2 gap-4 px-4 py-6 bg-[#0D0D0D]">
+    <article
+      className={`flex flex-col items-center max-w-[20rem] border border-white/20 rounded-md md:gap-2 gap-4 px-4 py-6 bg-[#0D0D0D] __anim-top __delay-${
+        index * 250
+      }`}
+    >
       <div className="size-14 bg-white rounded-xl flex items-center justify-center">
         {features.icon}
       </div>

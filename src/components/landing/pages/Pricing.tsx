@@ -5,17 +5,22 @@ import { pricingInfo } from "../constants/Pricing";
 
 function Pricing() {
   return (
-    <section id="pricing" className="__section-padding flex flex-col items-center bg-gradient-to-b from-black via-black to-[#4F21A1] text-white">
+    <section
+      id="pricing"
+      className="__section-padding flex flex-col items-center bg-gradient-to-b from-black via-black to-[#4F21A1] text-white"
+    >
       <SectionHeader
         title="Price that suits your needs"
         description="A more effective way to track progress, make every task a meaningful step toward success."
       />
 
       <div className="flex flex-wrap gap-8 my-7 justify-center md:items-end">
-        {pricingInfo.map((pricingInfo) => (
+        {pricingInfo.map((pricingInfo, i) => (
           <main
             key={pricingInfo.plan}
-            className={`flex flex-col gap-5 p-8 min-w-[20rem] md:min-w-[18rem] rounded-2xl border border-white/15 shadow-md text-sm transition duration-500 hover:-translate-y-4 cursor-pointer`}
+            className={`flex flex-col gap-5 p-8 min-w-[20rem] md:min-w-[18rem] rounded-2xl border border-white/15 shadow-md text-sm transition duration-500 hover:-translate-y-4 cursor-pointer __anim-bottom __delay-${
+              i * 250
+            }`}
             style={{
               backgroundColor: pricingInfo.inBlack ? "#070212" : "#14082ab7",
               color: "white",
@@ -73,10 +78,12 @@ function Button({
 function FeaturesList({ features }: { features: string[] }) {
   return (
     <ul className="space-y-5">
-      {features.map((feature) => (
+      {features.map((feature, i) => (
         <div
           key={feature}
-          className={`flex gap-3 items-center text-sm font-light`}
+          className={`flex gap-3 items-center text-sm font-light __anim-bottom __delay-${
+            i * 250
+          }`}
         >
           <GiCheckMark />
           <span>{feature}</span>

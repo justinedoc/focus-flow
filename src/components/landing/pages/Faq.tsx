@@ -22,6 +22,7 @@ function Faq() {
             key={index}
             faq={faq}
             isOpen={openIndex === index}
+            index={index + 1}
             onClick={() => handleAccordionClick(index)}
           />
         ))}
@@ -34,14 +35,22 @@ function FaqAccordion({
   faq,
   isOpen,
   onClick,
+  index,
 }: {
   faq: FaqsType;
   isOpen: boolean;
   onClick: () => void;
+  index: number;
 }) {
   const contentRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="border-b border-gray-300/20 max-w-[37rem]">
+    <div
+      className={`border-b border-gray-300/20 max-w-[37rem] ${
+        index % 2 === 0
+          ? `__anim-right __delay-${index * 300}`
+          : `__anim-left __delay-${index * 300}`
+      }`}
+    >
       <button
         className="w-full flex justify-between items-center py-5 text-left"
         onClick={onClick}

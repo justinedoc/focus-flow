@@ -10,7 +10,7 @@ function Hero() {
       className="bg-hero-grad min-h-screen md:min-h-[90vh] text-white  relative overflow-y-hidden md:px-36 px-5 py-32 md:py-16"
     >
       <main className="flex items-center flex-col gap-7 relative z-20 md:mt-7 h-full">
-        <h1 className="font-extrabold text-[4.5rem] md:text-[6rem] lg:text-[8.5rem] leading-[0.8] text-center">
+        <h1 className="font-extrabold text-[4.5rem] md:text-[6rem] lg:text-[8.5rem] leading-[0.8] text-center __anim-bottom __delay-200">
           One Task <br /> at a Time
         </h1>
         <SectionHeader description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes." />
@@ -21,13 +21,13 @@ function Hero() {
         src={heroIconMsg}
         alt="message"
         loading="lazy"
-        className="absolute top-32 size-[12rem] right-48 z-20 drop-shadow-2xl hidden md:block"
+        className="absolute top-32 size-[12rem] right-48 z-20 drop-shadow-2xl hidden md:block __anim-left __delay-500"
       />
       <img
         src={heroIconSend}
         alt="message"
         loading="lazy"
-        className="absolute top-48 size-[12rem] left-52 z-20 drop-shadow-2xl hidden md:block"
+        className="absolute top-48 size-[12rem] left-52 z-20 drop-shadow-2xl hidden md:block __anim-right __delay-650"
       />
     </section>
   );

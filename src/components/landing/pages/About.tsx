@@ -12,7 +12,12 @@ function About() {
         description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes, one task at a time."
       />
 
-      <img src={aboutImg} alt="dashboard img" loading="lazy" className="my-3" />
+      <img
+        src={aboutImg}
+        alt="dashboard img"
+        loading="lazy"
+        className="my-3 __anim-bottom __delay-400"
+      />
     </section>
   );
 }

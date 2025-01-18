@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "./pages/About";
 import Banner from "./pages/Banner";
 import Faq from "./pages/Faq";
@@ -7,8 +8,19 @@ import Hero from "./pages/Hero";
 import Pricing from "./pages/Pricing";
 import Testimonials from "./pages/Testimonials";
 import Navbar from "./ui/Navbar";
+import ScrollReveal from "scrollreveal";
+import { animations } from "./animations";
 
 function LandingPage() {
+  useEffect(() => {
+    const sr = ScrollReveal?.({
+      distance: "16px",
+      duration: 1200,
+      delay: 100,
+      reset: false,
+    });
+    animations(sr);
+  }, []);
   return (
     <main>
       <Navbar />
