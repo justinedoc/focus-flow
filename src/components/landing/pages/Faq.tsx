@@ -11,7 +11,7 @@ function Faq() {
   };
   return (
     <section
-      id="help"
+      id="faq"
       className="__section-padding bg-gradient-to-b from-[#4F21A1] to-black min-h-screen text-white md:py-14 space-y-5"
     >
       <SectionHeader title="Frequently asked questions" />

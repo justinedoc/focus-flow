@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="bg-hero-grad min-h-screen md:min-h-[90vh] text-white __section-padding pt-16 relative overflow-y-hidden"
+      className="bg-hero-grad min-h-screen md:min-h-[90vh] text-white  relative overflow-y-hidden md:px-36 px-5 py-32 md:py-16"
     >
       <main className="flex items-center flex-col gap-7 relative z-20 md:mt-7 h-full">
         <h1 className="font-extrabold text-[4.5rem] md:text-[6rem] lg:text-[8.5rem] leading-[0.8] text-center">

@@ -8,8 +8,12 @@ function Features() {
       id="features"
       className="bg-black text-white flex flex-col items-center __section-padding md:pb-10 relative"
     >
-      <div className="absolute md:-top-36 top-[-6.5rem] left-0 z-10 w-full">
-        <img src={heroOverlay} alt="Hero background" className="w-[40rem] md:w-full h-[7rem]" />
+      <div className="absolute md:-top-28 top-[-6.5rem] left-0 z-10 w-full">
+        <img
+          src={heroOverlay}
+          alt="Hero background"
+          className="w-[40rem] md:w-full h-[7rem]"
+        />
       </div>
 
       <SectionHeader

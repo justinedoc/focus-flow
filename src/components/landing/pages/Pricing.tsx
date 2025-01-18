@@ -5,7 +5,7 @@ import { pricingInfo } from "../constants/Pricing";
 
 function Pricing() {
   return (
-    <section className="__section-padding flex flex-col items-center bg-gradient-to-b from-black via-black to-[#4F21A1] text-white">
+    <section id="pricing" className="__section-padding flex flex-col items-center bg-gradient-to-b from-black via-black to-[#4F21A1] text-white">
       <SectionHeader
         title="Price that suits your needs"
         description="A more effective way to track progress, make every task a meaningful step toward success."

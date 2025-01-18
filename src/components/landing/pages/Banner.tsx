@@ -1,11 +1,10 @@
-import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
 import goalsIcon from "../../../assets/icons/banner-pie-icon.png";
 import SettingsIcon from "../../../assets/icons/banner-settings-icon.png";
 
 function Banner() {
   return (
-    <section className="bg-black text-white flex flex-col items-center __section-padding md:py-16 justify-center relative">
+    <section className="bg-black text-white flex flex-col items-center justify-center __section-padding md:py-16 relative">
       <SectionHeader title="Get instant access" />
 
       <p className="text-[#BBBBBB] max-w-[28rem] text-center mb-6">
@@ -13,26 +12,28 @@ function Banner() {
         progress and motivate your efforts.
       </p>
 
-      <form className="flex gap-4 flex-wrap">
+      <form className="flex flex-wrap gap-2 md:justify-center px-5">
         <input
           type="text"
           placeholder="name@email.com"
-          className="placeholder:text-white/50 bg-white/20 py-2 px-4 rounded-lg border-none outline-none focus:ring-1 ring-white/50"
+          className="placeholder:text-white/50 bg-white/20 py-2 px-4 rounded-lg border-none outline-none focus:ring-1 ring-white/50 md:w-fit w-full"
         />
-        <Button>Get access</Button>
+        <button className="w-full md:w-fit py-2 px-4 font-semibold bg-white rounded-lg border-none text-black">
+          Get access
+        </button>
       </form>
 
       <img
         src={goalsIcon}
         alt="message"
         loading="lazy"
-        className="absolute top-0 size-[12rem] left-10 drop-shadow-2xl"
+        className="absolute top-0 size-[12rem] left-10 drop-shadow-2xl md:block hidden"
       />
       <img
         src={SettingsIcon}
         alt="message"
         loading="lazy"
-        className="absolute top-24 size-[14rem] right-10 drop-shadow-2xl "
+        className="absolute top-24 size-[14rem] right-10 drop-shadow-2xl md:block hidden"
       />
     </section>
   );

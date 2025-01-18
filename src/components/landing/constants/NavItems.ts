@@ -22,6 +22,6 @@ export const navItems: NavItemsTypes[] = [
   },
   {
     name: "FAQ",
-    link: "#help",
+    link: "#faq",
   },
 ];
