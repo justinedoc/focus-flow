@@ -15,27 +15,27 @@ interface SocialNavsType {
 
 export const socialNavs: SocialNavsType[] = [
   {
-    icon: <FaXTwitter size={24} />,
+    icon: <FaXTwitter size={20} />,
     name: "Twitter",
     url: "#",
   },
   {
-    icon: <FaSquareInstagram size={24} />,
+    icon: <FaSquareInstagram size={20} />,
     name: "Instagram",
     url: "#",
   },
   {
-    icon: <FaPinterest size={24} />,
+    icon: <FaPinterest size={20} />,
     name: "Pinterest",
     url: "#",
   },
   {
-    icon: <FaLinkedin size={24} />,
+    icon: <FaLinkedin size={20} />,
     name: "LinkedIn",
     url: "#",
   },
   {
-    icon: <FaYoutube size={24} />,
+    icon: <FaYoutube size={20} />,
     name: "YouTube",
     url: "#",
   },

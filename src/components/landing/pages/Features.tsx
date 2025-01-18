@@ -8,7 +8,7 @@ function Features() {
       id="features"
       className="bg-black text-white flex flex-col items-center __section-padding md:pb-10 relative"
     >
-      <div className="absolute -top-40 left-0 z-10">
+      <div className="absolute -top-36 left-0 z-10">
         <img src={heroOverlay} alt="Hero background" />
       </div>
 
@@ -18,7 +18,7 @@ function Features() {
       Enjoy customizable lists, team work tools, and smart tracking all in one place. Set tasks, get reminders, and see your progress simply and quickly."
       />
 
-      <main className="flex flex-wrap gap-4 mt-10 mb-3">
+      <main className="grid xl:grid-cols-3 grid-cols-1 gap-4 mt-10 mb-3">
         {featuresInfo.map((info) => (
           <FeaturesCard key={info.title} features={info} />
         ))}

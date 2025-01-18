@@ -1,9 +1,11 @@
 import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
+import goalsIcon from "../../../assets/icons/banner-pie-icon.png";
+import SettingsIcon from "../../../assets/icons/banner-settings-icon.png";
 
 function Banner() {
   return (
-    <section className="bg-black text-white flex flex-col items-center __section-padding md:py-16 justify-center">
+    <section className="bg-black text-white flex flex-col items-center __section-padding md:py-16 justify-center relative">
       <SectionHeader title="Get instant access" />
 
       <p className="text-[#BBBBBB] max-w-[28rem] text-center mb-6">
@@ -19,6 +21,19 @@ function Banner() {
         />
         <Button>Get access</Button>
       </form>
+
+      <img
+        src={goalsIcon}
+        alt="message"
+        loading="lazy"
+        className="absolute top-0 size-[12rem] left-10 drop-shadow-2xl"
+      />
+      <img
+        src={SettingsIcon}
+        alt="message"
+        loading="lazy"
+        className="absolute top-24 size-[14rem] right-10 drop-shadow-2xl "
+      />
     </section>
   );
 }
