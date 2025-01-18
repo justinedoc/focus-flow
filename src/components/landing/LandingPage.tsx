@@ -1,4 +1,5 @@
 import About from "./pages/About";
+import Banner from "./pages/Banner";
 import Faq from "./pages/Faq";
 import Features from "./pages/Features";
 import Footer from "./pages/Footer";
@@ -17,6 +18,7 @@ function LandingPage() {
       <Testimonials />
       <Pricing />
       <Faq />
+      <Banner />
       <Footer />
     </main>
   );
