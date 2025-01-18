@@ -5,7 +5,7 @@ import TestimonialCard from "../ui/TestimonialCard";
 function Testimonials() {
   return (
     <section
-      id="#testimonials"
+      id="testimonials"
       className="__section-padding flex flex-col items-center bg-gradient-to-b from-[#4F21A1] to-black text-white"
     >
       <SectionHeader title="Testimonials" />

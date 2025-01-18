@@ -1,4 +1,4 @@
-import { FaCross, FaPlus } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
 import { faqs, type FaqsType } from "../constants/Faq";
 import SectionHeader from "../ui/SectionHeader";
 import { useRef, useState } from "react";

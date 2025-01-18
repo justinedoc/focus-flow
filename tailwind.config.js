@@ -12,6 +12,10 @@ export default {
         "text-gradient":
           "linear-gradient(90deg, #DD7DFF 0%, #E1CD86 29%, #8BCB92 51%, #71C2EF 76%, #3BFFFF 100%)",
       },
+
+      dropShadow: {
+        "2xl": "5px 10px 10px rgba(0, 0, 0, 0.4)", // Customize the shadow here
+      },
     },
   },
   plugins: [],

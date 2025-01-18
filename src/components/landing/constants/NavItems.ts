@@ -16,4 +16,12 @@ export const navItems: NavItemsTypes[] = [
     name: "Testimonials",
     link: "#testimonials",
   },
+  {
+    name: "Pricing",
+    link: "#pricing",
+  },
+  {
+    name: "FAQ",
+    link: "#help",
+  },
 ];

@@ -1,5 +1,7 @@
 import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
+import heroIconSend from "../../../assets/icons/send-icon.png";
+import heroIconMsg from "../../../assets/icons/msg-icon.png";
 
 function Hero() {
   return (
@@ -14,6 +16,19 @@ function Hero() {
         <SectionHeader description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes." />
         <Button>Signup now!</Button>
       </main>
+
+      <img
+        src={heroIconMsg}
+        alt="message"
+        loading="lazy"
+        className="absolute top-32 size-[9.5rem] right-60 z-20 drop-shadow-2xl"
+      />
+      <img
+        src={heroIconSend}
+        alt="message"
+        loading="lazy"
+        className="absolute top-48 size-[9.5rem] left-60 z-20 drop-shadow-2xl "
+      />
     </section>
   );
 }
