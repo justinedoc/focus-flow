@@ -3,7 +3,7 @@ import Button from "./Button";
 import Logo from "./Logo";
 function Navbar() {
   return (
-    <nav className="flex justify-between items-center bg-black text-white px-10 py-5">
+    <nav className="md:flex justify-between items-center bg-black text-white px-10 py-5 hidden">
       <Logo withName />
 
       <div className="flex gap-16">

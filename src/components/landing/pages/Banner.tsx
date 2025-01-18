@@ -13,7 +13,7 @@ function Banner() {
         progress and motivate your efforts.
       </p>
 
-      <form className="flex gap-4">
+      <form className="flex gap-4 flex-wrap">
         <input
           type="text"
           placeholder="name@email.com"
