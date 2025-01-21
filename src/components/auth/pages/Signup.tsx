@@ -1,6 +1,6 @@
 import logoImg from "../../../assets/images/logo.png";
 import authBg from "../../../assets/images/authBg.png";
-import SignupForm from "../ui/SignupForm";
+import SignupForm from "../_components/SignupForm";
 function Signup() {
   return (
     <section className="w-full flex bg-gradient-to-b from-black via-black to-[#200D42] min-h-screen text-white">
