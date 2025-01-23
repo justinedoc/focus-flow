@@ -2,6 +2,7 @@ import React from "react";
 import { GiCheckMark } from "react-icons/gi";
 import SectionHeader from "../ui/SectionHeader";
 import { pricingInfo } from "../constants/Pricing";
+import { Link } from "react-router";
 
 function Pricing() {
   return (
@@ -40,7 +41,9 @@ function Pricing() {
               <span className="text-md font-medium text-[#6F6C90]">{`/${pricingInfo.duration}`}</span>
             </h1>
 
-            <Button inBlack={pricingInfo.inBlack}>Signup now!</Button>
+            <Link to={"/signup"}>
+              <Button inBlack={pricingInfo.inBlack}>Signup now!</Button>
+            </Link>
 
             <div className="mt-3">
               <FeaturesList features={pricingInfo.features} />

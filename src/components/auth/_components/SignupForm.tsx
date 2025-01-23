@@ -25,10 +25,14 @@ export default function SignupForm() {
     register,
     reset,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
     watch,
   } = useForm({
     resolver: zodResolver(SignupSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
   });
 
   function handleCheckPassword(password: string) {
@@ -59,8 +63,8 @@ export default function SignupForm() {
     reset();
   }
 
-  const password: string = watch("password", "");
-  const email: string | null = watch("email", null);
+  const password: string = watch("password");
+  const email: string | null = watch("email");
   const isEmailValid = email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const isPasswordValid = handleCheckPassword(password).every(
@@ -70,14 +74,16 @@ export default function SignupForm() {
   return (
     <form
       onSubmit={handleSubmit(createAcc)}
-      className="flex flex-col gap-7 md:max-w-[80%] mt-5"
+      className="flex flex-col gap-7 w-full md:max-w-[80%] md:mt-5"
     >
       <FormHead title="Create an account">
-        Already have an account? <CustomLink>Login</CustomLink>
-        or <CustomLink>Login with SSO</CustomLink>
+        Already have an account? <CustomLink to="/login">Login</CustomLink>
       </FormHead>
 
-      <button className="flex items-center gap-2 text-md border border-gray-400/30 justify-center py-2 rounded-sm bg-white text-black font-medium">
+      <button
+        type="button"
+        className="flex items-center gap-2 text-md border border-gray-400/30 justify-center py-2 rounded-sm bg-white text-black font-medium"
+      >
         <FcGoogle size={24} className="" />
         <span>Continue with Google</span>
       </button>
@@ -141,7 +147,7 @@ export default function SignupForm() {
 
       <Button
         type="submit"
-        disabled={!isPasswordValid || !isEmailValid || isSubmitting}
+        disabled={!isPasswordValid || !isEmailValid || !isValid || isSubmitting}
         className="bg-[#2b0e5d] font-semibold hover:bg-zinc-500/50"
       >
         {isSubmitting ? "Creating..." : "Create a free account"}

@@ -2,6 +2,7 @@ import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
 import heroIconSend from "../../../assets/icons/send-icon.png";
 import heroIconMsg from "../../../assets/icons/msg-icon.png";
+import { Link } from "react-router";
 
 function Hero() {
   return (
@@ -14,7 +15,9 @@ function Hero() {
           One Task <br /> at a Time
         </h1>
         <SectionHeader description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes." />
-        <Button>Signup now!</Button>
+        <Link to={"/signup"}>
+          <Button>Signup now!</Button>
+        </Link>
       </main>
 
       <img

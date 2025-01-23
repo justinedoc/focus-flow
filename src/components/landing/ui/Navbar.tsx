@@ -4,6 +4,7 @@ import Button from "./Button";
 import Logo from "./Logo";
 import { useEffect, useRef, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
+import { Link } from "react-router";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -31,7 +32,7 @@ function Navbar() {
 
       {/* Navigation Links */}
       <div
-        className={`flex gap-10 md:gap-16 md:relative fixed top-0 right-0 bg-black md:flex-row flex-col min-w-[17rem] md:w-auto md:p-0 p-10 rounded-l-xl md:rounded-none md:border-0 border border-white/20 transition-transform duration-500 ease-in-out md:translate-x-0 ${
+        className={`flex gap-10 md:relative fixed top-0 right-0 bg-black md:flex-row flex-col min-w-[17rem] md:w-auto justify-between md:p-0 p-10 rounded-l-xl md:rounded-none md:border-0 border border-white/20 transition-transform duration-500 ease-in-out md:translate-x-0 ${
           isNavOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -59,8 +60,12 @@ function Navbar() {
 
         {/* Auth Buttons */}
         <aside className="flex gap-5 md:flex-row flex-col mt-5 md:mt-0">
-          <Button>Signup</Button>
-          <Button>Login</Button>
+          <Link to="/signup">
+            <Button>Signup</Button>
+          </Link>
+          <Link to="/login">
+            <Button>Login</Button>
+          </Link>
         </aside>
       </div>
 
