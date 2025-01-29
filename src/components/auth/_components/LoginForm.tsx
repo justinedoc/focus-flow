@@ -1,4 +1,3 @@
-import { FcGoogle } from "react-icons/fc";
 import { CustomLink } from "../ui/CustomLink";
 import { FormHead } from "../ui/FormHead";
 import { useState } from "react";
@@ -10,6 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { DarkOverlay } from "../ui/DarkOverlay";
 import LoadingAnim from "../ui/LoadingAnim";
+import GoogleSigninBtn from "../ui/GoogleSigninBtn";
 
 const LoginSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -48,13 +48,7 @@ export default function LoginForm() {
         Don't have an account? <CustomLink to="/signup">Signup</CustomLink>
       </FormHead>
 
-      <button
-        type="button"
-        className="flex items-center gap-2 text-md border border-gray-400/30 justify-center py-2 rounded-sm bg-white text-black font-medium"
-      >
-        <FcGoogle size={24} className="" />
-        <span>Continue with Google</span>
-      </button>
+      <GoogleSigninBtn>Signin with Google</GoogleSigninBtn>
 
       <InputBox>
         <label className="text-md font-semibold">Email</label>

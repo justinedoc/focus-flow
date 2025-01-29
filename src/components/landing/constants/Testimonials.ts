@@ -18,7 +18,7 @@ export const testimonialInfo: TestimonialsType[] = [
     name: "Emma Johnson",
     username: "@emmaj",
     content:
-      "FocusFlow has completely streamlined my daily workflow. I feel more organized and productive than ever!",
+      "FocusFlow has completely streamlined my daily workflow. I feel more productive than ever!",
   },
   {
     image: testimonialImg2,

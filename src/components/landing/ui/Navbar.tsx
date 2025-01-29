@@ -28,7 +28,7 @@ function Navbar() {
       className="flex justify-between items-center w-full bg-black text-white md:px-10 px-5 md:py-5 py-4 md:relative fixed top-0 left-0 z-50"
     >
       {/* Logo */}
-      <Logo withName />
+      <Logo />
 
       {/* Navigation Links */}
       <div
@@ -61,10 +61,10 @@ function Navbar() {
         {/* Auth Buttons */}
         <aside className="flex gap-5 md:flex-row flex-col mt-5 md:mt-0">
           <Link to="/signup">
-            <Button>Signup</Button>
+            <Button className="w-full">Signup</Button>
           </Link>
           <Link to="/login">
-            <Button>Login</Button>
+            <Button className="w-full">Login</Button>
           </Link>
         </aside>
       </div>

@@ -22,7 +22,7 @@ function LandingPage() {
     animations(sr);
   }, []);
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <Features />
