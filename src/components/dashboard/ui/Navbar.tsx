@@ -2,12 +2,14 @@ import { Search } from "lucide-react";
 import calendarIcon from "../../../assets/icons/calender.svg";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
 
 function Navbar() {
   return (
     <nav className="py-4 px-6 flex items-center justify-between w-full border-b">
       <div className="flex gap-5 items-center">
         <SidebarTrigger />
+        <Separator orientation="vertical" className="mr-2 h-4" />
         <section id="search" className="relative bg-gray-100 w-fit rounded-md">
           <input
             type="text"

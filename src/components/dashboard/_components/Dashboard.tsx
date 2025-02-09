@@ -1,6 +1,6 @@
 import Navbar from "../ui/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "./AppSideBar";
+import { AppSidebar } from "./AppSidebar";
 
 function Dashboard() {
   return (
