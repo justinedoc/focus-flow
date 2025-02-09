@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { DarkOverlay } from "../ui/DarkOverlay";
 import LoadingAnim from "../ui/LoadingAnim";
 import GoogleSigninBtn from "../ui/GoogleSigninBtn";
+import { useNavigate } from "react-router";
 
 const SignupSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -20,6 +21,7 @@ const SignupSchema = z.object({
 
 export default function SignupForm() {
   const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -61,6 +63,7 @@ export default function SignupForm() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     console.log(data);
     reset();
+    navigate("/dashboard");
   }
 
   const password: string = watch("password");

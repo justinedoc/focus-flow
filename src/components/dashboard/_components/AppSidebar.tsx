@@ -23,34 +23,34 @@ import {
 } from "@/components/ui/sidebar";
 import Logo from "@/components/landing/ui/Logo";
 import SidebarProjects from "./SidebarProjects";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { type sidebarProject } from "@/types/sidebarTypes";
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: LayoutGrid,
   },
   {
     title: "Messages",
-    url: "#",
+    url: "/dashboard/messages",
     icon: MessageSquareMore,
   },
   {
     title: "Tasks",
-    url: "#",
+    url: "/dashboard/tasks",
     icon: ListChecks,
   },
   {
     title: "Members",
-    url: "#",
+    url: "/dashboard/members",
     icon: UsersRound,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/dashboard/settings",
     icon: Settings,
   },
 ];
@@ -79,12 +79,13 @@ const sidebarProjects: sidebarProject[] = [
 ];
 
 export function AppSidebar() {
+  const location = useLocation();
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader className="py-[.87rem] flex gap-1">
         <Logo />
       </SidebarHeader>
-
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
@@ -92,7 +93,14 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton size={"lg"} asChild>
+                  <SidebarMenuButton
+                    isActive={
+                      location.pathname.split("/").at(-1) ===
+                      item.url.split("/").at(-1)
+                    }
+                    size={"lg"}
+                    asChild
+                  >
                     <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
@@ -125,9 +133,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarSeparator />
-      <SidebarFooter>
-        
-      </SidebarFooter>
+      <SidebarFooter></SidebarFooter>
     </Sidebar>
   );
 }

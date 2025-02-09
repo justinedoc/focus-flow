@@ -1,14 +1,14 @@
-import Navbar from "../ui/Navbar";
+import Navbar from "./ui/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "./AppSidebar";
+import { AppSidebar } from "./_components/AppSidebar";
 
-function Dashboard() {
+function Dashboard({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
       <main className="w-full">
         <Navbar />
-        <h1 className="text-3xl text-center">Under construction</h1>
+        {children}
       </main>
     </SidebarProvider>
   );
