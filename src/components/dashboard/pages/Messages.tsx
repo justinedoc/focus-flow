@@ -1,11 +1,5 @@
-import Dashboard from "../Dashboard";
-
 function Messages() {
-  return (
-    <Dashboard>
-      <h1>Messages Page</h1>
-    </Dashboard>
-  );
+  return <h1>Messages Page</h1>;
 }
 
 export default Messages;

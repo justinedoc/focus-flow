@@ -8,6 +8,7 @@ import Tasks from "./components/dashboard/pages/Tasks";
 import Members from "./components/dashboard/pages/Members";
 import Settings from "./components/dashboard/pages/Settings";
 import Projects from "./components/dashboard/pages/Projects";
+import DashboardLayout from "./components/dashboard/DashboardLayout";
 
 function App() {
   // return <LandingPage />;
@@ -16,7 +17,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/dashboard">
+      <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<Home />} />
         <Route path="messages" element={<Messages />} />
         <Route path="tasks" element={<Tasks />} />

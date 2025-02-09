@@ -1,17 +1,18 @@
 import Navbar from "./ui/Navbar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./_components/AppSidebar";
+import { Outlet } from "react-router";
 
-function Dashboard({ children }: { children: React.ReactNode }) {
+function DashboardLayout(): JSX.Element {
   return (
     <SidebarProvider>
       <AppSidebar />
       <main className="w-full">
         <Navbar />
-        {children}
+        <Outlet />
       </main>
     </SidebarProvider>
   );
 }
 
-export default Dashboard;
+export default DashboardLayout;

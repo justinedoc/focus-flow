@@ -1,11 +1,5 @@
-import Dashboard from "../Dashboard";
-
 function Projects() {
-  return (
-    <Dashboard>
-      <h1>Projects page </h1>
-    </Dashboard>
-  );
+  return <h1>Projects page </h1>;
 }
 
 export default Projects;

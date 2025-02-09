@@ -1,11 +1,5 @@
-import Dashboard from "../Dashboard";
-
 function Tasks() {
-  return (
-    <Dashboard>
-      <h1>Tasks Page</h1>
-    </Dashboard>
-  );
+  return <h1>Tasks Page</h1>;
 }
 
 export default Tasks;

@@ -1,11 +1,5 @@
-import Dashboard from "../Dashboard";
-
 function Members() {
-  return (
-    <Dashboard>
-      <h1>Members</h1>
-    </Dashboard>
-  );
+  return <h1>Members</h1>;
 }
 
 export default Members;

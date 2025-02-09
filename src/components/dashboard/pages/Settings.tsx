@@ -1,11 +1,5 @@
-import Dashboard from "../Dashboard";
-
 function Settings() {
-  return (
-    <Dashboard>
-      <h1>Settings Page</h1>
-    </Dashboard>
-  );
+  return <h1>Settings Page</h1>;
 }
 
 export default Settings;
