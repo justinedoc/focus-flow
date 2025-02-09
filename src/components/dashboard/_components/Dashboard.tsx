@@ -1,12 +1,16 @@
 import Navbar from "../ui/Navbar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "./AppSideBar";
 
 function Dashboard() {
   return (
-    <div className="mt-44 mx-auto">
-      <Navbar />
-
-      <h1 className="text-3xl text-center">Under construction</h1>
-    </div>
+    <SidebarProvider>
+      <AppSidebar />
+      <main className="w-full">
+        <Navbar />
+        <h1 className="text-3xl text-center">Under construction</h1>
+      </main>
+    </SidebarProvider>
   );
 }
 
