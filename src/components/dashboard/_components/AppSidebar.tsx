@@ -2,7 +2,6 @@ import {
   LayoutGrid,
   ListChecks,
   MessageSquareMore,
-  MoreHorizontal,
   PlusSquare,
   Settings,
   UsersRound,
@@ -11,24 +10,21 @@ import {
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import Logo from "@/components/landing/ui/Logo";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import SidebarProjects from "./SidebarProjects";
+import { Link } from "react-router";
+import { type sidebarProject } from "@/types/sidebarTypes";
 
 // Menu items.
 const items = [
@@ -59,6 +55,29 @@ const items = [
   },
 ];
 
+const sidebarProjects: sidebarProject[] = [
+  {
+    id: 1872,
+    title: "Mobile app",
+    status: "DONE",
+  },
+  {
+    id: 1873,
+    title: "Website redesign",
+    status: "INPROGRESS",
+  },
+  {
+    id: 1874,
+    title: "Design system",
+    status: "TODO",
+  },
+  {
+    id: 1875,
+    title: "Wireframe",
+    status: "DUE",
+  },
+];
+
 export function AppSidebar() {
   return (
     <Sidebar collapsible="icon">
@@ -74,10 +93,10 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton size={"lg"} asChild>
-                    <a href={item.url}>
+                    <Link to={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -97,32 +116,18 @@ export function AppSidebar() {
 
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuButton>
-                <div
-                  id="circle"
-                  className="size-2 bg-green-500 rounded-full"
-                ></div>
-                <span className="font-semibold">Mobile app</span>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <SidebarMenuAction>
-                      <MoreHorizontal />
-                    </SidebarMenuAction>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent side="right" align="start">
-                    <DropdownMenuItem>
-                      <span>Edit Project</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <span>Delete Project</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </SidebarMenuButton>
+              {sidebarProjects.map((project) => (
+                <SidebarProjects key={project.id} project={project} />
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+
+      <SidebarSeparator />
+      <SidebarFooter>
+        
+      </SidebarFooter>
     </Sidebar>
   );
 }
