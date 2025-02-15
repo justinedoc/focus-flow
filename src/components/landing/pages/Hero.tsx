@@ -1,8 +1,9 @@
-import Button from "../ui/Button";
 import SectionHeader from "../ui/SectionHeader";
 import heroIconSend from "../../../assets/icons/send-icon.png";
 import heroIconMsg from "../../../assets/icons/msg-icon.png";
 import { Link } from "react-router";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 function Hero() {
   return (
@@ -16,7 +17,10 @@ function Hero() {
         </h1>
         <SectionHeader description="Celebrate the joy of accomplishment with an app designed to track your progress, motivate your efforts, and celebrate your successes." />
         <Link to={"/signup"}>
-          <Button>Signup now!</Button>
+          <Button className="flex gap-2 items-center cursor-pointer group __anim-left __delay-1000 bg-white text-black hover:text-white">
+            <span>Get Started</span>
+            <FaArrowRightLong className="group-hover:scale-110 transition duration-300 group-hover:translate-x-2" />
+          </Button>
         </Link>
       </main>
 

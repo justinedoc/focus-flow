@@ -1,10 +1,10 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { navItems } from "../constants/NavItems";
-import Button from "./Button";
 import Logo from "./Logo";
 import { useEffect, useRef, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { Link } from "react-router";
+import { Button } from "@/components/ui/button";
 
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -61,10 +61,14 @@ function Navbar() {
         {/* Auth Buttons */}
         <aside className="flex gap-5 md:flex-row flex-col mt-5 md:mt-0">
           <Link to="/signup">
-            <Button className="w-full">Signup</Button>
+            <Button className="w-full bg-white text-black hover:text-white">
+              Signup
+            </Button>
           </Link>
           <Link to="/login">
-            <Button className="w-full">Login</Button>
+            <Button variant={"outline"} className="w-full bg-transparent">
+              Login
+            </Button>
           </Link>
         </aside>
       </div>
